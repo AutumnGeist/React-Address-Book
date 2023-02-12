@@ -26,6 +26,10 @@ function App() {
   //state for number of addresses displayed per pagination page
   const [numPerPage] = useState(10)
 
+  //database URL
+  const url = "https://my-json-server.typicode.com/autumngeist/React-Address-Book/addressBook"
+  // local host url = "http://localhost:5000/addressBook"
+
   //get data from JSON server at startup
   useEffect(() => {
     const getBook = async () => {
@@ -42,14 +46,14 @@ function App() {
 
   //Fetch all addresses from server & sort alphabetically by name
   const fetchBook = async () => {
-    const res = await fetch('http://localhost:5000/addressBook?_sort=name&_order=asc')
+    const res = await fetch(`${url}?_sort=name&_order=asc`)
     const data = await res.json()
     return data
   }
 
   //Fetch a specific address by ID
   const fetchAddress = async (id) => {
-    const res = await fetch(`http://localhost:5000/addressBook/${id}`)
+    const res = await fetch(`${url}/${id}`)
     const data = await res.json()
     return data
   }
@@ -58,7 +62,7 @@ function App() {
   const addAddress = async (address) => {
     try {
       //add to DB
-        await fetch('http://localhost:5000/addressBook', {
+        await fetch(`${url}`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -78,7 +82,7 @@ function App() {
   const deleteAddress = async (id) => {
     try {
       //remove the address from DB
-      await fetch(`http://localhost:5000/addressBook/${id}`, {
+        await fetch(`${url}/${id}`, {
         method: 'DELETE'
       })
       console.log("Deleted: ", id)
@@ -116,7 +120,7 @@ function App() {
     console.log("UpdateAddress: ", data)
     try {
       //update the DB with PATCH
-      await fetch(`http://localhost:5000/addressBook/${data.id}`, {
+        await fetch(`${url}/${data.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type':'application/json'
@@ -143,7 +147,7 @@ function App() {
   const search = async (query) => {
     console.log("Query: ", query)
     try {
-      const res = await fetch(`http://localhost:5000/addressBook/?q=${query}`)
+      const res = await fetch(`${url}/?q=${query}`)
       const data = await res.json()
       if(data.length > 0) {
         console.log("Search Results: ", data)
