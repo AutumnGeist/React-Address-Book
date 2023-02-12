@@ -11,7 +11,6 @@ This repo is hosted on GitHub pages! Check it out in action [here](https://autum
 [My-JSON-Server](https://my-json-server.typicode.com/)
 
 \
-\
 # Getting Started
 ```
 git clone https://github.com/AutumnGeist/React-Address-Book.git
@@ -33,7 +32,6 @@ Start the server: \
 
 For more help, reference [JSON-Server Resources](#json-server-resources)
 
-\
 \
 # React Project Run
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
