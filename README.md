@@ -7,14 +7,16 @@ This app is filled with sample contact data which is hosted on GitHub via My-JSO
 This repo is hosted on GitHub pages! Check it out in action [here](https://autumngeist.github.io/React-Address-Book/)!
 
 ## JSON-Server Resources
-[JSON-Server](https://github.com/typicode/json-server)
+[JSON-Server](https://github.com/typicode/json-server) /
 [My-JSON-Server](https://my-json-server.typicode.com/)
 
 # Getting Started
-`git clone https://github.com/AutumnGeist/React-Address-Book.git`
-`cd react-address-book`
-`npm install`
-`npm start`
+```
+git clone https://github.com/AutumnGeist/React-Address-Book.git
+cd react-address-book
+npm install
+npm start
+```
 
 For more help running React apps, see [[#React Project Run]] documentation below.
 
@@ -22,9 +24,9 @@ For more help running React apps, see [[#React Project Run]] documentation below
 Switch to using your local JSON-server to persist database changes. The only change needed is updating the URL variable to your local host. For example: http://localhost:5000/addressBook/
 
 ### Local JSON-Server Instructions
-Start the service and have it use the db.json file. Adding a port is optional:
-`json-server --watch db.json --port 5000`
-Start the server:
+Start the service and have it use the db.json file. Adding a port is optional: /
+`json-server --watch db.json --port 5000` /
+Start the server: /
 `npm run server`
 
 For more help, reference [[#JSON-Server Resources]]
