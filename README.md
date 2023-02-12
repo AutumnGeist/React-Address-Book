@@ -18,7 +18,7 @@ npm install
 npm start
 ```
 
-For more help running React apps, see [[#React Project Run]] documentation below.
+For more help running React apps, see [React Project Run](#react-project-run) documentation below.
 
 ## Local Usage
 Switch to using your local JSON-server to persist database changes. The only change needed is updating the URL variable to your local host. For example: http://localhost:5000/addressBook/
@@ -29,7 +29,7 @@ Start the service and have it use the db.json file. Adding a port is optional: /
 Start the server: /
 `npm run server`
 
-For more help, reference [[#JSON-Server Resources]]
+For more help, reference [JSON-Server Resources](#json-server-resources)
 
 # React Project Run
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
